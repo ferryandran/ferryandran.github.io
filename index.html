@@ -4,21 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Ferry Andran Saputra | Portofolio Profesional</title>
+  <title>Ferry Andran Saputra | Portofolio</title>
   <meta name="description"
-    content="Portofolio resmi Ferry Andran Saputra - Mahasiswa Universitas Insan Pembangunan yang mendalami Bisnis, Data, dan AI. Terbuka untuk magang dan part-time di Tangerang dan Bandar Lampung.">
-  <meta name="keywords"
-    content="Ferry Andran Saputra, Portofolio, Universitas Insan Pembangunan, AI Minecraft, Voice Door, Tangerang, Bandar Lampung, Magang, Part Time">
+    content="Portofolio Ferry Andran Saputra - Mahasiswa Insan Pembangunan. Fokus pada Bisnis, Data, dan AI Voice Engineering.">
   <meta name="author" content="Ferry Andran Saputra">
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Ferry Andran Saputra | Portofolio Profesional">
-  <meta property="og:description"
-    content="Mahasiswa Universitas Insan Pembangunan - Menghubungkan Bisnis, Data, dan AI Voice Engineering.">
+  <meta property="og:title" content="Ferry Andran Saputra | Portofolio">
+  <meta property="og:description" content="Mahasiswa Insan Pembangunan - Bisnis, Data, dan AI Voice Engineering.">
   <meta property="og:image" content="profile.jpg">
   <meta property="og:type" content="website">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -26,12 +21,8 @@
     rel="stylesheet">
 
   <style>
-    /* =========================================
-       DESIGN SYSTEM & CSS CUSTOM PROPERTIES
-       ========================================= */
     :root {
-      /* Dark Theme (Default) */
-      --bg: #090D16;
+      --bg: #0A0E1A;
       --bg-card: rgba(18, 26, 43, 0.75);
       --bg-card-hover: rgba(26, 38, 62, 0.85);
       --bg-glass: rgba(15, 23, 42, 0.65);
@@ -45,7 +36,7 @@
       --accent-rgb: 14, 165, 233;
       --accent-hover: #38BDF8;
       --accent-glow: rgba(14, 165, 233, 0.25);
-      --accent-gradient: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 50%, #10B981 100%);
+      --accent-gradient: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
       --accent-ink: #03131F;
 
       --badge-success-bg: rgba(16, 185, 129, 0.15);
@@ -83,7 +74,7 @@
       --accent-rgb: 2, 132, 199;
       --accent-hover: #0369A1;
       --accent-glow: rgba(2, 132, 199, 0.2);
-      --accent-gradient: linear-gradient(135deg, #0284C7 0%, #0D9488 50%, #059669 100%);
+      --accent-gradient: linear-gradient(135deg, #0284C7 0%, #0D9488 100%);
       --accent-ink: #FFFFFF;
 
       --badge-success-bg: rgba(16, 185, 129, 0.12);
@@ -95,7 +86,6 @@
       --shadow-glow: 0 0 35px -8px rgba(2, 132, 199, 0.25);
     }
 
-    /* Reset & Base */
     *,
     *::before,
     *::after {
@@ -120,7 +110,6 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* Ambient Background Mesh */
     .bg-mesh {
       position: fixed;
       top: 0;
@@ -131,8 +120,7 @@
       z-index: 0;
       background:
         radial-gradient(circle at 15% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 45%),
-        radial-gradient(circle at 85% 75%, rgba(16, 185, 129, 0.06) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.04) 0%, transparent 60%);
+        radial-gradient(circle at 85% 75%, rgba(16, 185, 129, 0.06) 0%, transparent 40%);
     }
 
     a {
@@ -145,7 +133,6 @@
       color: var(--accent-hover);
     }
 
-    /* Container */
     .wrap {
       max-width: 68rem;
       margin: 0 auto;
@@ -154,9 +141,7 @@
       z-index: 1;
     }
 
-    /* =========================================
-       NAVBAR
-       ========================================= */
+    /* NAVBAR */
     .navbar {
       position: sticky;
       top: 0;
@@ -295,9 +280,7 @@
       background: var(--bg-card-hover);
     }
 
-    /* =========================================
-       HERO SECTION (WITH PHOTO SHOWCASE)
-       ========================================= */
+    /* HERO */
     .hero {
       padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3.5rem);
     }
@@ -316,7 +299,6 @@
       }
     }
 
-    /* Hero Left */
     .status-pill {
       display: inline-flex;
       align-items: center;
@@ -341,20 +323,9 @@
     }
 
     @keyframes pulse {
-      0% {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 0.4;
-        transform: scale(1.2);
-      }
-
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
     }
 
     .hero h1 {
@@ -413,7 +384,7 @@
       align-items: center;
     }
 
-    /* Hero Right - Photo Frame */
+    /* Photo */
     .photo-showcase {
       display: flex;
       justify-content: center;
@@ -459,25 +430,6 @@
       transform: scale(1.03);
     }
 
-    /* Floating Badges on Photo */
-    .photo-badge-top {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #FFFFFF;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.3rem 0.7rem;
-      border-radius: var(--radius-full);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
     .photo-footer {
       margin-top: 0.9rem;
       display: flex;
@@ -497,162 +449,9 @@
       color: var(--muted);
     }
 
-    .photo-badge-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--badge-success-text);
-      background: var(--badge-success-bg);
-      border: 1px solid var(--badge-success-border);
-      padding: 0.25rem 0.65rem;
-      border-radius: var(--radius-full);
-    }
 
-    /* Ambient Floating Cards */
-    .floating-pill {
-      position: absolute;
-      background: var(--bg-card);
-      border: 1px solid var(--line);
-      backdrop-filter: blur(10px);
-      padding: 0.5rem 0.9rem;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--ink);
-      z-index: 2;
-      animation: float 4s ease-in-out infinite;
-    }
 
-    .floating-pill.pos-1 {
-      bottom: -15px;
-      left: -20px;
-      animation-delay: 0s;
-    }
-
-    .floating-pill.pos-2 {
-      top: -15px;
-      left: -15px;
-      animation-delay: 2s;
-    }
-
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(-8px);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .floating-pill {
-        display: none;
-      }
-    }
-
-    /* =========================================
-       AUDIO WAVE INTERACTIVE SECTION
-       ========================================= */
-    .wave-section {
-      margin: 1.5rem 0 3rem;
-      background: var(--bg-card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      backdrop-filter: blur(8px);
-    }
-
-    .wave-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .wave-title {
-      font-family: var(--display);
-      font-weight: 700;
-      font-size: 1.05rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--ink);
-    }
-
-    .wave-status {
-      font-size: 0.82rem;
-      font-family: var(--mono);
-      color: var(--accent);
-      background: rgba(14, 165, 233, 0.1);
-      padding: 0.2rem 0.6rem;
-      border-radius: var(--radius-sm);
-    }
-
-    .wave-container {
-      width: 100%;
-      height: 70px;
-      position: relative;
-      background: var(--panel);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--line);
-    }
-
-    svg.wave {
-      display: block;
-      width: 100%;
-      height: 100%;
-      color: var(--accent);
-    }
-
-    .wave-footer {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.8rem;
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      color: var(--ink-secondary);
-    }
-
-    .wave-btn {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      color: var(--ink);
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 0.4rem 0.85rem;
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: all 0.2s ease;
-    }
-
-    .wave-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* =========================================
-       SECTION LAYOUTS
-       ========================================= */
+    /* SECTIONS */
     section {
       padding: 3rem 0;
       border-top: 1px solid var(--line);
@@ -691,7 +490,6 @@
       line-height: 1.5;
     }
 
-    /* Card styling */
     .card {
       background: var(--bg-card);
       border: 1px solid var(--line);
@@ -708,9 +506,7 @@
       box-shadow: var(--shadow-soft), var(--shadow-glow);
     }
 
-    /* =========================================
-       TENTANG SAYA SECTION
-       ========================================= */
+    /* ABOUT */
     .about-lead {
       font-size: 1.125rem;
       font-weight: 500;
@@ -753,9 +549,6 @@
       font-size: 1rem;
       color: var(--ink);
       margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
 
     .about-box p {
@@ -764,9 +557,7 @@
       line-height: 1.55;
     }
 
-    /* =========================================
-       PROYEK SECTION (VOICE DOOR)
-       ========================================= */
+    /* PROJECT */
     .project-card {
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
@@ -892,7 +683,7 @@
       border-radius: var(--radius-sm);
     }
 
-    /* Pipeline Flow Box */
+    /* Pipeline */
     .pipeline-box {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -932,9 +723,7 @@
       font-weight: bold;
     }
 
-    /* =========================================
-       KEAHLIAN & ALAT KERJA (SKILLS)
-       ========================================= */
+    /* SKILLS */
     .skills-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -958,11 +747,6 @@
     .skill-card:hover {
       border-color: var(--line-active);
       transform: translateY(-2px);
-    }
-
-    .skill-card-icon {
-      font-size: 1.75rem;
-      margin-bottom: 0.75rem;
     }
 
     .skill-card-title {
@@ -996,9 +780,7 @@
       border-radius: 6px;
     }
 
-    /* =========================================
-       TIMELINE (PENDIDIKAN & PENGALAMAN)
-       ========================================= */
+    /* TIMELINE */
     .timeline {
       position: relative;
       padding-left: 1.5rem;
@@ -1085,9 +867,7 @@
       line-height: 1.55;
     }
 
-    /* =========================================
-       KETERSEDIAAN / CALL TO ACTION
-       ========================================= */
+    /* CTA */
     .cta-card {
       background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(16, 185, 129, 0.08) 100%), var(--bg-card);
       border: 1px solid var(--accent);
@@ -1156,9 +936,7 @@
       color: var(--ink);
     }
 
-    /* =========================================
-       FOOTER
-       ========================================= */
+    /* FOOTER */
     footer {
       border-top: 1px solid var(--line);
       padding: 2.5rem 0;
@@ -1182,7 +960,7 @@
       list-style: none;
     }
 
-    /* Toast Notification */
+    /* Toast */
     .toast {
       position: fixed;
       bottom: 2rem;
@@ -1208,9 +986,7 @@
       pointer-events: auto;
     }
 
-    /* =========================================
-       PRINT STYLES (RESUME FRIENDLY)
-       ========================================= */
+    /* Print */
     @media print {
       body {
         background: #FFFFFF !important;
@@ -1221,9 +997,6 @@
       .navbar,
       .bg-mesh,
       .btn-icon,
-      .photo-badge-status,
-      .floating-pill,
-      .wave-btn,
       .toast,
       .hero-ctas {
         display: none !important;
@@ -1265,10 +1038,9 @@
 
 <body>
 
-  <!-- Background Ambient Glow -->
   <div class="bg-mesh" aria-hidden="true"></div>
 
-  <!-- Navigation Bar -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="wrap">
       <div class="nav-inner">
@@ -1281,36 +1053,31 @@
         <nav aria-label="Menu Utama">
           <ul class="nav-menu">
             <li><a href="#tentang" class="nav-link">Tentang</a></li>
-            <li><a href="#proyek" class="nav-link">Proyek AI</a></li>
+            <li><a href="#proyek" class="nav-link">Proyek</a></li>
             <li><a href="#keahlian" class="nav-link">Keahlian</a></li>
-            <li><a href="#pendidikan" class="nav-link">Pendidikan & Organisasi</a></li>
+            <li><a href="#pendidikan" class="nav-link">Pendidikan</a></li>
             <li><a href="#kontak" class="nav-link">Kontak</a></li>
           </ul>
         </nav>
 
         <div class="nav-actions">
-          <!-- Dark / Light Theme Toggle -->
           <button type="button" class="btn-icon" id="themeToggle" aria-label="Ganti mode gelap atau terang"
             title="Ganti Tema">
             <span id="themeIcon">☀️</span>
           </button>
-
-          <!-- CTA Hubungi -->
           <a href="#kontak" class="btn-primary">
             <span>Hubungi</span>
-            <span>→</span>
           </a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section with Photo Showcase -->
+  <!-- HERO -->
   <main id="hero" class="hero">
     <div class="wrap">
       <div class="hero-grid">
 
-        <!-- Left: Intro & Bio -->
         <div>
           <div class="status-pill">
             <span class="status-dot"></span>
@@ -1323,73 +1090,39 @@
           </h1>
 
           <p class="hero-lead">
-            Halo! Saya <strong>Ferry Andran Saputra</strong>, mahasiswa <strong>STIE Insan Pembangunan</strong> di
-            Tangerang. Berpengalaman memimpin sebagai <strong>Wakil Ketua Umum HMSE</strong> serta <strong>Ketua Pelaksana Event Ticketing</strong>, saya berfokus pada integrasi manajemen organisasi, strategi bisnis, analisis data, dan rekayasa kecerdasan buatan.
+            Saya <strong>Ferry Andran Saputra</strong>, mahasiswa <strong>Insan Pembangunan</strong> di
+            Tangerang. Berpengalaman memimpin organisasi dan mengelola event, saya berfokus pada integrasi
+            strategi bisnis, analisis data, dan rekayasa AI.
           </p>
 
           <div class="hero-highlights">
-            <span class="highlight-pill">🎓 STIE Insan Pembangunan</span>
-            <span class="highlight-pill">🏛️ Ex-Wakil Ketua Umum HMSE</span>
-            <span class="highlight-pill">🎟️ Ketua Pelaksana Event Ticketing</span>
-            <span class="highlight-pill">🤖 AI Voice & Python</span>
-            <span class="highlight-pill">📈 Stockbit Financial Insight</span>
-            <span class="highlight-pill">📍 Tangerang • Bandar Lampung</span>
+            <span class="highlight-pill">Insan Pembangunan</span>
+            <span class="highlight-pill">Wakil Ketua Umum HMSE</span>
+            <span class="highlight-pill">AI Voice & Python</span>
+            <span class="highlight-pill">Tangerang • Bandar Lampung</span>
           </div>
 
           <div class="hero-ctas">
             <a href="https://wa.me/628764061435?text=Halo%20Ferry,%20saya%20melihat%20portofolio%20Anda"
               target="_blank" rel="noopener noreferrer" class="btn-primary" id="ctaWhatsapp">
-              <span>💬 Hubungi via WhatsApp</span>
+              Hubungi via WhatsApp
             </a>
             <a href="#proyek" class="btn-secondary">
-              <span>Lihat Proyek AI Voice Door</span>
+              Lihat Proyek
             </a>
-            <button type="button" class="btn-secondary" onclick="window.print()"
-              title="Cetak atau simpan portofolio sebagai PDF">
-              <span>📄 Cetak / PDF</span>
-            </button>
           </div>
         </div>
 
-        <!-- Right: Modern Profile Photo Card -->
         <div class="photo-showcase">
-          <!-- Floating Pill 1 -->
-          <div class="floating-pill pos-1" aria-hidden="true">
-            <span>🎙️</span>
-            <div>
-              <div style="font-size:0.75rem; color:var(--muted)">Proyek Unggulan</div>
-              <div>Voice Door AI (Forge + ECAPA)</div>
-            </div>
-          </div>
-
-          <!-- Floating Pill 2 -->
-          <div class="floating-pill pos-2" aria-hidden="true">
-            <span>🏛️</span>
-            <div>
-              <div style="font-size:0.75rem; color:var(--muted)">Kepemimpinan Organisasi</div>
-              <div>Waketum HMSE & Ketua Event</div>
-            </div>
-          </div>
-
-          <!-- Main Photo Card -->
           <div class="photo-card">
             <div class="photo-inner">
               <img src="profile.jpg" alt="Foto Profesional Ferry Andran Saputra" class="profile-img" id="mainPhoto">
-              <div class="photo-badge-top">
-                <span>📍</span>
-                <span>Tangerang, ID</span>
-              </div>
             </div>
 
             <div class="photo-footer">
               <div>
                 <div class="photo-caption">Ferry Andran Saputra</div>
-                <div class="photo-subcaption">Ex-Waketum HMSE &bull; Tech Explorer</div>
-              </div>
-
-              <div class="photo-badge-status">
-                <span class="status-dot"></span>
-                <span>Foto Profil Resmi</span>
+                <div class="photo-subcaption">Waketum HMSE &bull; Tech Explorer</div>
               </div>
             </div>
           </div>
@@ -1397,81 +1130,46 @@
 
       </div>
 
-      <!-- Interactive Soundwave Visualizer Section -->
-      <div class="wave-section">
-        <div class="wave-header">
-          <div class="wave-title">
-            <span>📊</span>
-            <span>Simulasi Biometrik Suara (Voice Door)</span>
-          </div>
-          <div class="wave-status" id="waveStatus">STATUS: FREKUENSI SUARA SIAP</div>
-        </div>
 
-        <div class="wave-container" title="Visualisasi gelombang suara Voice Door">
-          <svg class="wave" id="wave" viewBox="0 0 600 64" preserveAspectRatio="none" role="img"
-            aria-label="Visualisasi Gelombang Suara"></svg>
-        </div>
-
-        <div class="wave-footer">
-          <div>
-            Frasa Kunci: <strong>"hi google open the door"</strong> &bull; Verifikasi: ECAPA-TDNN Speaker Verification
-          </div>
-          <div style="display:flex; gap:0.5rem;">
-            <button type="button" class="wave-btn" id="btnAnimateWave">
-              <span>▶ Uji Frekuensi Suara</span>
-            </button>
-          </div>
-        </div>
-      </div>
 
     </div>
   </main>
 
   <div class="wrap">
 
-    <!-- TENTANG SAYA SECTION -->
+    <!-- TENTANG -->
     <section id="tentang" aria-labelledby="heading-tentang">
       <div class="section-grid">
         <div class="section-header">
           <h2 id="heading-tentang" class="section-title">Tentang Saya</h2>
-          <p class="section-desc">Eksplorasi sinergi antara bisnis, teknologi, dan kecerdasan buatan.</p>
+          <p class="section-desc">Sinergi antara bisnis, teknologi, dan kecerdasan buatan.</p>
         </div>
 
         <div>
           <div class="card">
             <p class="about-lead">
-              Saya mahasiswa yang bersemangat mengintegrasikan pola pikir bisnis strategis, analisis data empiris, dan
-              implementasi teknologi terkini untuk memecahkan masalah nyata.
+              Mahasiswa yang bersemangat mengintegrasikan pola pikir bisnis strategis, analisis data empiris, dan
+              implementasi teknologi untuk memecahkan masalah nyata.
             </p>
 
             <div class="about-columns">
               <div class="about-box featured">
-                <h4><span>🏛️</span> Kepemimpinan Organisasi & Event</h4>
-                <p>Teruji memegang tanggung jawab strategis sebagai <strong>Wakil Ketua Umum HMSE</strong> (Himpunan Mahasiswa Software Engineering) dalam mengoordinasi divisi dan aspirasi mahasiswa, serta dipercaya sebagai <strong>Ketua Pelaksana Event Ticketing</strong> yang memimpin manajemen operasional, sistem ticketing, anggaran, dan kepanitiaan acara.</p>
+                <h4>Kepemimpinan Organisasi & Event</h4>
+                <p>Teruji sebagai <strong>Wakil Ketua Umum HMSE</strong> dalam mengoordinasi divisi dan aspirasi
+                  mahasiswa, serta <strong>Ketua Pelaksana Event Ticketing</strong> yang memimpin manajemen
+                  operasional, sistem ticketing, anggaran, dan kepanitiaan acara.</p>
               </div>
 
               <div class="about-box">
-                <h4><span>💻</span> Rekayasa Perangkat Lunak</h4>
-                <p>Membangun arsitektur backend Python (FastAPI), integrasi basis data modern via Supabase, kolaborasi
+                <h4>Rekayasa Perangkat Lunak</h4>
+                <p>Membangun arsitektur backend Python (FastAPI), integrasi basis data via Supabase, kolaborasi
                   kode di GitHub, serta pengembangan mod game interaktif dengan Java.</p>
               </div>
 
               <div class="about-box">
-                <h4><span>📈</span> Keuangan & Pasar Modal</h4>
-                <p>Aktif mempelajari analisis pasar dasar, dinamika investasi saham, dan manajemen portofolio melalui
+                <h4>Bisnis & Keuangan</h4>
+                <p>Aktif mempelajari analisis pasar modal, dinamika investasi saham, dan manajemen portofolio melalui
                   platform Stockbit untuk memahami kalkulasi risiko finansial.</p>
-              </div>
-
-              <div class="about-box">
-                <h4><span>🤝</span> Kolaborasi & Komunikasi</h4>
-                <p>Terbiasa bekerja cepat dengan ekosistem Google Workspace, Google Classroom, pembuatan materi
-                  presentasi visual berdaya tarik tinggi dengan Canva, dan remote support TeamViewer.</p>
-              </div>
-
-              <div class="about-box">
-                <h4><span>⚽</span> Kerja Sama & Disiplin</h4>
-                <p>Pengalaman di klub futsal menumbuhkan ketahanan fisik, fokus bawah tekanan, komunikasi lapangan yang
-                  efektif, dan kedisiplinan jadwal yang konsisten.</p>
               </div>
             </div>
           </div>
@@ -1479,12 +1177,12 @@
       </div>
     </section>
 
-    <!-- PROYEK UNGGULAN SECTION -->
+    <!-- PROYEK -->
     <section id="proyek" aria-labelledby="heading-proyek">
       <div class="section-grid">
         <div class="section-header">
           <h2 id="heading-proyek" class="section-title">Proyek Unggulan</h2>
-          <p class="section-desc">Karya nyata yang memadukan rekayasa perangkat lunak dan kecerdasan buatan.</p>
+          <p class="section-desc">Karya nyata yang memadukan rekayasa perangkat lunak dan AI.</p>
         </div>
 
         <div>
@@ -1494,7 +1192,7 @@
                 onerror="this.style.display='none'">
               <div class="project-banner-badge">
                 <span class="status-dot"></span>
-                <span>Dalam Pengembangan Aktif</span>
+                <span>Dalam Pengembangan</span>
               </div>
             </div>
 
@@ -1507,47 +1205,44 @@
               </div>
 
               <p class="project-desc">
-                Sistem keamanan biometrik suara mutakhir di dalam game Minecraft. Pintu hanya dapat terbuka jika pemain
+                Sistem keamanan biometrik suara di dalam game Minecraft. Pintu hanya dapat terbuka jika pemain
                 mengucapkan frasa rahasia <em>"hi google open the door"</em> dan sistem AI memverifikasi bahwa profil
-                suara tersebut 100% cocok dengan pemilik pintu yang sah.
+                suara tersebut cocok dengan pemilik pintu yang sah.
               </p>
 
-              <!-- Architecture Pipeline -->
               <div class="pipeline-box">
-                <div class="pipeline-title">Alur Kerja Sistem (Architecture Pipeline)</div>
+                <div class="pipeline-title">Alur Kerja Sistem</div>
                 <div class="pipeline-steps">
-                  <span class="pipeline-step">Suara Pemain (In-Game)</span>
-                  <span class="pipeline-arrow">➔</span>
-                  <span class="pipeline-step">Forge 1.20.1 + Simple Voice Chat</span>
-                  <span class="pipeline-arrow">➔</span>
-                  <span class="pipeline-step">FastAPI REST Server</span>
-                  <span class="pipeline-arrow">➔</span>
-                  <span class="pipeline-step">Verifikasi ECAPA-TDNN</span>
-                  <span class="pipeline-arrow">➔</span>
-                  <span class="pipeline-step">STT Whisper / Vosk</span>
-                  <span class="pipeline-arrow">➔</span>
-                  <span class="pipeline-step">Pintu Terbuka!</span>
+                  <span class="pipeline-step">Suara Pemain</span>
+                  <span class="pipeline-arrow">→</span>
+                  <span class="pipeline-step">Forge 1.20.1</span>
+                  <span class="pipeline-arrow">→</span>
+                  <span class="pipeline-step">FastAPI Server</span>
+                  <span class="pipeline-arrow">→</span>
+                  <span class="pipeline-step">ECAPA-TDNN</span>
+                  <span class="pipeline-arrow">→</span>
+                  <span class="pipeline-step">STT Whisper</span>
+                  <span class="pipeline-arrow">→</span>
+                  <span class="pipeline-step">Pintu Terbuka</span>
                 </div>
               </div>
 
               <ul class="feature-list">
                 <li class="feature-item">
-                  <span class="feature-icon">✔</span>
+                  <span class="feature-icon">✓</span>
                   <div><strong>Mod Minecraft:</strong> Dibangun dengan Java 17 dan Minecraft Forge 1.20.1.
-                    Mengintegrasikan Simple Voice Chat API untuk menangkap audio real-time baik pada server dedikasi
-                    maupun mode LAN/Singleplayer.</div>
+                    Mengintegrasikan Simple Voice Chat API untuk menangkap audio real-time.</div>
                 </li>
                 <li class="feature-item">
-                  <span class="feature-icon">✔</span>
-                  <div><strong>Layanan AI Voice Backend:</strong> Layanan Python FastAPI berlatensi rendah yang
-                    diamankan dengan autentikasi token. Memanfaatkan model ECAPA-TDNN untuk <em>Speaker
-                      Verification</em> dan fleksibilitas transkripsi (Google STT, Vosk, atau faster-whisper).</div>
+                  <span class="feature-icon">✓</span>
+                  <div><strong>Layanan AI Backend:</strong> Python FastAPI berlatensi rendah dengan autentikasi token.
+                    Model ECAPA-TDNN untuk <em>Speaker Verification</em> dan transkripsi (Google STT, Vosk, atau
+                    faster-whisper).</div>
                 </li>
                 <li class="feature-item">
-                  <span class="feature-icon">✔</span>
-                  <div><strong>Rencana Pengembangan Lanjutan:</strong> Integrasi dashboard Streamlit untuk perekaman
-                    sampel (enrollment suara), pembuatan dataset mandiri, serta evaluasi metrik akurasi biometrik: EER,
-                    FAR, FRR, WER, dan latensi pemrosesan.</div>
+                  <span class="feature-icon">✓</span>
+                  <div><strong>Pengembangan Lanjutan:</strong> Dashboard Streamlit untuk enrollment suara, pembuatan
+                    dataset mandiri, serta evaluasi metrik: EER, FAR, FRR, WER, dan latensi.</div>
                 </li>
               </ul>
 
@@ -1567,72 +1262,63 @@
       </div>
     </section>
 
-    <!-- KEAHLIAN & PERANGKAT SECTION -->
+    <!-- KEAHLIAN -->
     <section id="keahlian" aria-labelledby="heading-keahlian">
       <div class="section-grid">
         <div class="section-header">
           <h2 id="heading-keahlian" class="section-title">Keahlian & Toolkit</h2>
-          <p class="section-desc">Kombinasi keterampilan teknis, analisis bisnis, dan alat produktivitas kerja.</p>
+          <p class="section-desc">Kombinasi keterampilan teknis, analisis bisnis, dan alat produktivitas.</p>
         </div>
 
         <div>
           <div class="skills-grid">
 
-            <!-- Card 1 -->
             <div class="skill-card">
-              <div class="skill-card-icon">⚡</div>
               <h3 class="skill-card-title">Pemrograman & AI</h3>
-              <p class="skill-card-desc">Pengembangan logika sistem, API backend berkinerja tinggi, dan integrasi model
-                pemrosesan suara kecerdasan buatan.</p>
+              <p class="skill-card-desc">Pengembangan logika sistem, API backend berkinerja tinggi, dan integrasi
+                model AI.</p>
               <div class="skill-badges">
                 <span class="skill-badge">Python</span>
                 <span class="skill-badge">Java 17</span>
                 <span class="skill-badge">FastAPI</span>
-                <span class="skill-badge">Supabase DB</span>
+                <span class="skill-badge">Supabase</span>
                 <span class="skill-badge">Git & GitHub</span>
                 <span class="skill-badge">Speech AI</span>
               </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="skill-card">
-              <div class="skill-card-icon">🏛️</div>
-              <h3 class="skill-card-title">Kepemimpinan & Manajemen Event</h3>
-              <p class="skill-card-desc">Pengalaman teruji memimpin organisasi kemahasiswaan dan memanajemeni operasional acara skala besar serta sistem ticketing.</p>
+              <h3 class="skill-card-title">Kepemimpinan & Manajemen</h3>
+              <p class="skill-card-desc">Memimpin organisasi kemahasiswaan dan memanajemeni operasional acara skala
+                besar.</p>
               <div class="skill-badges">
                 <span class="skill-badge">Waketum HMSE</span>
-                <span class="skill-badge">Ketua Pelaksana Event</span>
-                <span class="skill-badge">Ticketing Management</span>
-                <span class="skill-badge">Koordinasi Lintas Divisi</span>
-                <span class="skill-badge">Manajemen Anggaran</span>
+                <span class="skill-badge">Event Leader</span>
+                <span class="skill-badge">Ticketing</span>
                 <span class="skill-badge">Public Speaking</span>
               </div>
             </div>
 
-            <!-- Card 3 -->
             <div class="skill-card">
-              <div class="skill-card-icon">📊</div>
               <h3 class="skill-card-title">Bisnis & Finansial</h3>
-              <p class="skill-card-desc">Pemahaman dasar manajemen investasi, pembacaan laporan pasar modal, dan
-                evaluasi data finansial.</p>
+              <p class="skill-card-desc">Analisis investasi, pembacaan laporan pasar modal, dan evaluasi data
+                finansial.</p>
               <div class="skill-badges">
-                <span class="skill-badge">Analisis Pasar Saham</span>
+                <span class="skill-badge">Analisis Pasar</span>
                 <span class="skill-badge">Stockbit</span>
-                <span class="skill-badge">Riset Data Bisnis</span>
-                <span class="skill-badge">Manajemen Keuangan Dasar</span>
+                <span class="skill-badge">Riset Bisnis</span>
+                <span class="skill-badge">Manajemen Keuangan</span>
               </div>
             </div>
 
-            <!-- Card 4 -->
             <div class="skill-card">
-              <div class="skill-card-icon">🎨</div>
-              <h3 class="skill-card-title">Kolaborasi Digital, Desain & IT</h3>
-              <p class="skill-card-desc">Kombinasi keterampilan desain presentasi visual, koordinasi tim digital teratur, dan dukungan teknis komputer.</p>
+              <h3 class="skill-card-title">Kolaborasi Digital</h3>
+              <p class="skill-card-desc">Desain presentasi visual, koordinasi tim digital, dan dukungan teknis.</p>
               <div class="skill-badges">
-                <span class="skill-badge">Canva Visual</span>
+                <span class="skill-badge">Canva</span>
                 <span class="skill-badge">Google Workspace</span>
-                <span class="skill-badge">Troubleshooting OS</span>
-                <span class="skill-badge">TeamViewer Remote</span>
+                <span class="skill-badge">Troubleshooting</span>
+                <span class="skill-badge">TeamViewer</span>
               </div>
             </div>
 
@@ -1641,91 +1327,90 @@
       </div>
     </section>
 
-    <!-- PENDIDIKAN & PENGALAMAN SECTION -->
+    <!-- PENDIDIKAN -->
     <section id="pendidikan" aria-labelledby="heading-pendidikan">
       <div class="section-grid">
         <div class="section-header">
-          <h2 id="heading-pendidikan" class="section-title">Pendidikan & Pengalaman Organisasi</h2>
-          <p class="section-desc">Rekam jejak kepemimpinan himpunan mahasiswa, manajemen proyek event, akademis, dan riset.</p>
+          <h2 id="heading-pendidikan" class="section-title">Pendidikan & Pengalaman</h2>
+          <p class="section-desc">Rekam jejak kepemimpinan, manajemen proyek, dan akademis.</p>
         </div>
 
         <div>
           <div class="timeline">
 
-            <!-- Item 1: Wakil Ketua Umum HMSE -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 class="timeline-title">Staff Produksi &bull; PT Sky Tape Indonesia</h3>
+                  <span class="timeline-date">Sedang Berjalan</span>
+                </div>
+                <div class="timeline-subtitle">Departemen Produksi &bull; Quality Control</div>
+                <p class="timeline-body">
+                  Bekerja di bagian produksi dengan tugas utama <strong>memeriksa kualitas barang</strong> (cek barang
+                  yang bagus) sebelum dilanjutkan ke tahap produksi berikutnya atau diproses untuk dijual. Bertanggung
+                  jawab menjaga standar kualitas output produksi.
+                </p>
+              </div>
+            </div>
+
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <div class="timeline-header">
                   <h3 class="timeline-title">Wakil Ketua Umum &bull; HMSE</h3>
-                  <span class="timeline-date">Kepemimpinan Organisasi</span>
+                  <span class="timeline-date">Kepemimpinan</span>
                 </div>
-                <div class="timeline-subtitle">Himpunan Mahasiswa Software Engineering (HMSE)</div>
+                <div class="timeline-subtitle">Himpunan Mahasiswa Software Engineering</div>
                 <p class="timeline-body">
-                  Mengemban tanggung jawab utama dalam memimpin roda organisasi kemahasiswaan tingkat program studi. Mengoordinasikan program kerja strategis antar-divisi, mengawasi jalannya kegiatan internal & eksternal himpunan, membina kekompakan dan potensi anggota di bidang teknologi, serta menjembatani komunikasi aktif antara mahasiswa, pengurus, dan pihak institusi.
+                  Memimpin roda organisasi tingkat program studi. Mengoordinasikan program kerja antar-divisi,
+                  mengawasi kegiatan internal & eksternal, membina potensi anggota, serta menjembatani komunikasi
+                  antara mahasiswa dan institusi.
                 </p>
               </div>
             </div>
 
-            <!-- Item 2: Ketua Pelaksana Event Ticketing -->
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <div class="timeline-header">
                   <h3 class="timeline-title">Ketua Pelaksana &bull; Event Ticketing</h3>
-                  <span class="timeline-date">Project & Event Leader</span>
+                  <span class="timeline-date">Project Leader</span>
                 </div>
-                <div class="timeline-subtitle">Manajemen Acara & Sistem Registrasi / Penjualan Tiket</div>
+                <div class="timeline-subtitle">Manajemen Acara & Sistem Registrasi Tiket</div>
                 <p class="timeline-body">
-                  Bertindak sebagai Project Leader yang mengomandoi seluruh rangkaian kepanitiaan acara: mulai dari penyusunan konsep kegiatan, penentuan timeline, manajemen anggaran belanja, hingga pengelolaan sistem <strong>ticketing</strong> (pembelian, registrasi, distribusi, dan validasi tiket peserta pada hari-H) guna memastikan jalannya kegiatan berlangsung lancar, tertib, dan sukses.
+                  Memimpin seluruh rangkaian kepanitiaan: penyusunan konsep, timeline, manajemen anggaran, hingga
+                  pengelolaan sistem <strong>ticketing</strong> (pembelian, registrasi, dan validasi tiket peserta).
                 </p>
               </div>
             </div>
 
-            <!-- Item 3: Kampus -->
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <div class="timeline-header">
-                  <h3 class="timeline-title">STIE Insan Pembangunan</h3>
+                  <h3 class="timeline-title">Insan Pembangunan</h3>
                   <span class="timeline-date">Mahasiswa Aktif</span>
                 </div>
-                <div class="timeline-subtitle">Tangerang, Banten &bull; Konsentrasi Bisnis & Ekonomi</div>
+                <div class="timeline-subtitle">Tangerang, Banten &bull; Bisnis & Ekonomi</div>
                 <p class="timeline-body">
-                  Menempuh pendidikan tinggi dengan fokus studi bisnis dan ekonomi. Mengembangkan kemampuan analisis
-                  strategis, manajemen operasional, serta penerapan teknologi data dalam pengambilan keputusan bisnis.
+                  Menempuh pendidikan dengan fokus studi bisnis dan ekonomi. Mengembangkan kemampuan analisis strategis,
+                  manajemen operasional, serta penerapan teknologi data dalam pengambilan keputusan bisnis.
                 </p>
               </div>
             </div>
 
-            <!-- Item 4: Riset Akademis -->
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <div class="timeline-header">
-                  <h3 class="timeline-title">Partisipan Riset Kendaraan Listrik (EV)</h3>
+                  <h3 class="timeline-title">Riset Kendaraan Listrik (EV)</h3>
                   <span class="timeline-date">Kontribusi Akademis</span>
                 </div>
                 <div class="timeline-subtitle">Studi Perilaku Konsumen & Teknologi Berkelanjutan</div>
                 <p class="timeline-body">
-                  Berpartisipasi aktif dalam pengumpulan data dan survei mendalam mengenai adopsi kendaraan listrik di
-                  Indonesia, memberikan kontribusi data primer untuk kajian akademis masa depan transportasi hijau.
-                </p>
-              </div>
-            </div>
-
-            <!-- Item 5: Olahraga & Soft Skills -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h3 class="timeline-title">Anggota Klub Futsal</h3>
-                  <span class="timeline-date">Olahraga & Kolaborasi Tim</span>
-                </div>
-                <div class="timeline-subtitle">Pengembangan Karakter & Kepemimpinan</div>
-                <p class="timeline-body">
-                  Mengasah komunikasi taktis, koordinasi kerja sama regu di bawah tekanan waktu, kedisiplinan latihan,
-                  dan sportivitas yang secara langsung tercermin dalam etika kerja profesional.
+                  Berpartisipasi dalam pengumpulan data dan survei mendalam mengenai adopsi kendaraan listrik di
+                  Indonesia untuk kajian akademis masa depan transportasi hijau.
                 </p>
               </div>
             </div>
@@ -1735,55 +1420,49 @@
       </div>
     </section>
 
-    <!-- TARGET KARIER & KONTAK SECTION -->
+    <!-- KONTAK -->
     <section id="kontak" aria-labelledby="heading-kontak">
       <div class="section-grid">
         <div class="section-header">
-          <h2 id="heading-kontak" class="section-title">Target & Kontak</h2>
+          <h2 id="heading-kontak" class="section-title">Kontak</h2>
           <p class="section-desc">Siap berkontribusi dan belajar di lingkungan kerja nyata.</p>
         </div>
 
         <div>
           <div class="cta-card">
-            <h3 class="cta-title">Siap untuk Magang atau Pekerjaan Part-Time</h3>
+            <h3 class="cta-title">Terbuka untuk Magang & Part-Time</h3>
             <p class="cta-text">
-              Saya sedang mencari peluang magang, part-time, atau <em>student employment</em> di wilayah
-              <strong>Tangerang</strong> atau <strong>Bandar Lampung</strong>. Sangat antusias berkontribusi di bidang
-              administrasi bisnis, analisis data, dukungan IT/teknis, maupun proyek pengembangan perangkat lunak.
+              Mencari peluang magang atau part-time di wilayah <strong>Tangerang</strong> atau
+              <strong>Bandar Lampung</strong>. Antusias berkontribusi di bidang administrasi bisnis, analisis
+              data, dukungan IT, maupun pengembangan perangkat lunak.
             </p>
 
             <div class="contact-grid">
-
-              <!-- WhatsApp -->
-              <a href="https://wa.me/628764061435?text=Halo%20Ferry,%20saya%20tertarik%20dengan%20profil%20portofolio%20Anda"
+              <a href="https://wa.me/628764061435?text=Halo%20Ferry,%20saya%20tertarik%20dengan%20profil%20Anda"
                 target="_blank" rel="noopener noreferrer" class="contact-item">
                 <span class="contact-label">WhatsApp</span>
                 <span class="contact-val">Hubungi via Chat</span>
               </a>
 
-              <!-- Email Direct -->
               <div class="contact-item" style="cursor: pointer;" id="btnCopyEmail"
                 title="Klik untuk salin alamat email">
-                <span class="contact-label">Email (Klik untuk Salin)</span>
+                <span class="contact-label">Email</span>
                 <span class="contact-val" id="emailText">ferryandran04@gmail.com</span>
               </div>
 
-              <!-- Lokasi Penempatan -->
               <div class="contact-item">
-                <span class="contact-label">Wilayah Ketersediaan</span>
+                <span class="contact-label">Lokasi</span>
                 <span class="contact-val">Tangerang & Bandar Lampung</span>
               </div>
-
             </div>
 
             <div style="margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-              <a href="mailto:ferry.andran@email.com?subject=Tawaran%20Magang%20/%20Part-Time%20-%20Ferry%20Andran%20Saputra"
+              <a href="mailto:ferryandran04@gmail.com?subject=Tawaran%20Magang%20/%20Part-Time%20-%20Ferry%20Andran%20Saputra"
                 class="btn-primary">
-                <span>Kirim Pesan Email</span>
-                <span>✉</span>
+                Kirim Email
               </a>
               <button type="button" class="btn-secondary" onclick="window.print()">
-                <span>Unduh / Cetak Portofolio (PDF)</span>
+                Cetak / PDF
               </button>
             </div>
           </div>
@@ -1793,101 +1472,28 @@
 
   </div>
 
-  <!-- Toast Notification Container -->
+  <!-- Toast -->
   <div id="toast" class="toast" role="alert" aria-live="polite">Pesan notifikasi</div>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="wrap">
       <div class="footer-inner">
         <div>
-          &copy; 2026 <strong>Ferry Andran Saputra</strong> &bull; Universitas Insan Pembangunan &bull; Tangerang,
-          Banten.
+          &copy; 2026 <strong>Ferry Andran Saputra</strong> &bull; Insan Pembangunan
         </div>
         <ul class="footer-links">
           <li><a href="#hero">Kembali ke Atas ↑</a></li>
-          <li><a href="#proyek">Proyek Voice Door</a></li>
-          <li><a href="#kontak">Hubungi Saya</a></li>
+          <li><a href="#kontak">Hubungi</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
-  <!-- SCRIPT LOGIC -->
   <script>
-    // 1. Audio Waveform Generator & Animation
-    (function initWaveform() {
-      const svg = document.getElementById('wave');
-      const waveStatus = document.getElementById('waveStatus');
-      const btnAnimateWave = document.getElementById('btnAnimateWave');
-      if (!svg) return;
 
-      const ns = 'http://www.w3.org/2000/svg';
-      const n = 72;
-      const w = 600;
-      const h = 64;
-      const gap = w / n;
-      const rects = [];
 
-      for (let i = 0; i < n; i++) {
-        const t = i / (n - 1);
-        const env = Math.sin(Math.PI * t);
-        const amp = (0.15 + 0.85 * env) * (0.35 + 0.65 * Math.abs(Math.sin(i * 1.7) * Math.cos(i * 0.45)));
-        const bh = Math.max(3, amp * h);
-        const r = document.createElementNS(ns, 'rect');
-        r.setAttribute('x', (i * gap + gap * 0.2).toFixed(2));
-        r.setAttribute('width', (gap * 0.6).toFixed(2));
-        r.setAttribute('y', ((h - bh) / 2).toFixed(2));
-        r.setAttribute('height', bh.toFixed(2));
-        r.setAttribute('rx', '1.5');
-        r.setAttribute('fill', 'currentColor');
-        svg.appendChild(r);
-        rects.push({ el: r, baseAmp: amp });
-      }
-
-      let isAnimating = false;
-      let animFrameId = null;
-      let frame = 0;
-
-      function renderFrame() {
-        frame += 0.08;
-        for (let i = 0; i < n; i++) {
-          const t = i / (n - 1);
-          const env = Math.sin(Math.PI * t);
-          const dynamic = Math.sin(frame + i * 0.3) * 0.5 + 0.5;
-          const amp = (0.2 + 0.8 * env) * (0.25 + 0.75 * dynamic);
-          const bh = Math.max(4, amp * h);
-          rects[i].el.setAttribute('y', ((h - bh) / 2).toFixed(2));
-          rects[i].el.setAttribute('height', bh.toFixed(2));
-        }
-        animFrameId = requestAnimationFrame(renderFrame);
-      }
-
-      btnAnimateWave?.addEventListener('click', () => {
-        if (!isAnimating) {
-          isAnimating = true;
-          renderFrame();
-          waveStatus.textContent = 'STATUS: MENDETEKSI SUARA "HI GOOGLE OPEN THE DOOR"...';
-          waveStatus.style.color = '#34D399';
-          btnAnimateWave.innerHTML = '<span>⏹ Hentikan Simulasi</span>';
-          showToast('Simulasi Suara Berjalan: Mencocokkan Biometrik Pembicara...');
-        } else {
-          isAnimating = false;
-          cancelAnimationFrame(animFrameId);
-          for (let i = 0; i < n; i++) {
-            const bh = Math.max(3, rects[i].baseAmp * h);
-            rects[i].el.setAttribute('y', ((h - bh) / 2).toFixed(2));
-            rects[i].el.setAttribute('height', bh.toFixed(2));
-          }
-          waveStatus.textContent = 'STATUS: SUARA TERVERIFIKASI - PINTU TERBUKA!';
-          waveStatus.style.color = 'var(--accent)';
-          btnAnimateWave.innerHTML = '<span>▶ Uji Frekuensi Suara</span>';
-          showToast('Pintu Terverifikasi Dibuka dengan Sukses!');
-        }
-      });
-    })();
-
-    // 2. Dark / Light Theme Toggle
+    // Theme Toggle
     (function initTheme() {
       const themeToggle = document.getElementById('themeToggle');
       const themeIcon = document.getElementById('themeIcon');
@@ -1911,14 +1517,7 @@
       }
     })();
 
-    // 3. Clear legacy local photo cache (Foto kini permanen / paten menggunakan profile.jpg)
-    try {
-      localStorage.removeItem('ferry_custom_photo');
-    } catch (e) {
-      /* ignore */
-    }
-
-    // 4. Copy Email & Toast Utility
+    // Toast
     const toast = document.getElementById('toast');
     let toastTimeout = null;
 
@@ -1932,13 +1531,14 @@
       }, 3500);
     }
 
+    // Copy Email
     const btnCopyEmail = document.getElementById('btnCopyEmail');
     btnCopyEmail?.addEventListener('click', () => {
       const email = 'ferryandran04@gmail.com';
       navigator.clipboard?.writeText(email).then(() => {
-        showToast('Alamat email berhasil disalin ke clipboard: ' + email);
+        showToast('Email disalin: ' + email);
       }).catch(() => {
-        showToast('Alamat email: ' + email);
+        showToast('Email: ' + email);
       });
     });
   </script>

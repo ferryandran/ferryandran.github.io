@@ -4,21 +4,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Ferry Andran Saputra | Portofolio</title>
+  <title>Ferry Andran Saputra | Portofolio — Bisnis, Data & AI</title>
   <meta name="description"
-    content="Portofolio Ferry Andran Saputra - Mahasiswa Insan Pembangunan. Fokus pada Bisnis, Data, dan AI Voice Engineering.">
+    content="Portofolio Ferry Andran Saputra — mahasiswa Insan Pembangunan. Fokus pada strategi bisnis, analisis data, dan rekayasa AI (speech AI, Python, FastAPI).">
   <meta name="author" content="Ferry Andran Saputra">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A0E1A">
+  <link rel="canonical" href="https://ferryandran.github.io/">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Ferry Andran Saputra — Portofolio">
   <meta property="og:title" content="Ferry Andran Saputra | Portofolio">
-  <meta property="og:description" content="Mahasiswa Insan Pembangunan - Bisnis, Data, dan AI Voice Engineering.">
-  <meta property="og:image" content="profile.jpg">
+  <meta property="og:description"
+    content="Mahasiswa Insan Pembangunan — Bisnis, Data, dan AI Voice Engineering. Terbuka untuk magang & part-time.">
+  <meta property="og:image" content="project-voicedoor.jpg">
+  <meta property="og:image:width" content="1376">
+  <meta property="og:image:height" content="768">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ferry Andran Saputra | Portofolio">
+  <meta name="twitter:description"
+    content="Mahasiswa Insan Pembangunan — Bisnis, Data, dan AI Voice Engineering.">
+  <meta name="twitter:image" content="project-voicedoor.jpg">
+
+  <!-- Akselerasi: preload gambar hero untuk LCP -->
+  <link rel="preload" as="image" href="profile.jpg" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
+
+  <!-- Structured data (Person) untuk mesin pencari -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ferry Andran Saputra",
+    "url": "https://ferryandran.github.io/",
+    "image": "https://ferryandran.github.io/profile.jpg",
+    "jobTitle": "Mahasiswa | Waketum HMSE | AI Voice Engineering",
+    "email": "mailto:ferryandran04@gmail.com",
+    "telephone": "+628764061435",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tangerang",
+      "addressRegion": "Banten",
+      "addressCountry": "ID"
+    },
+    "sameAs": [
+      "https://github.com/ferryandran"
+    ],
+    "knowsAbout": ["Strategi Bisnis", "Analisis Data", "Python", "FastAPI", "Speech AI", "Minecraft Forge"]
+  }
+  </script>
 
   <style>
     :root {
@@ -1033,10 +1079,191 @@
         background: #FFFFFF;
       }
     }
+
+    /* ===== Aksesibilitas: Skip link ===== */
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -3rem;
+      z-index: 200;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius-sm);
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 0.75rem;
+      color: var(--accent-ink);
+    }
+
+    /* Fokus yang jelas untuk navigasi keyboard */
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== Menu Mobile (hamburger) ===== */
+    .menu-toggle {
+      display: inline-flex;
+    }
+
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    .menu-toggle .menu-icon {
+      display: block;
+      transition: transform 0.25s ease;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-icon {
+      transform: rotate(90deg);
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 0.5rem 0 1.25rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .mobile-menu.open {
+      display: flex;
+      animation: menuDrop 0.25s ease;
+    }
+
+    @media (min-width: 768px) {
+      .mobile-menu {
+        display: none !important;
+      }
+    }
+
+    @keyframes menuDrop {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .mobile-link {
+      display: block;
+      padding: 0.7rem 0.75rem;
+      border-radius: var(--radius-sm);
+      color: var(--ink-secondary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border-left: 2px solid transparent;
+    }
+
+    .mobile-link:hover {
+      color: var(--ink);
+      background: var(--bg-card);
+    }
+
+    .mobile-link.active {
+      color: var(--accent);
+      border-left-color: var(--accent);
+      background: rgba(14, 165, 233, 0.08);
+    }
+
+    /* ===== Link sosial ===== */
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      color: var(--ink-secondary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .social-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      background: var(--bg-card-hover);
+    }
+
+    .social-link svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ===== Nav aktif ===== */
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link.active {
+      color: var(--accent);
+    }
+
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      left: 0.6rem;
+      right: 0.6rem;
+      bottom: -0.15rem;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--accent);
+    }
+
+    /* ===== Animasi reveal saat scroll ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hormati preferensi gerak rendah */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
   </style>
 </head>
 
 <body>
+
+  <a href="#hero" class="skip-link">Lewati ke konten</a>
 
   <div class="bg-mesh" aria-hidden="true"></div>
 
@@ -1046,7 +1273,7 @@
       <div class="nav-inner">
         <a href="#hero" class="brand" aria-label="Kembali ke atas">
           <img src="profile.jpg" alt="Foto Ferry Andran Saputra" class="brand-avatar-mini" id="navAvatar"
-            onerror="this.style.display='none'">
+            width="34" height="34" onerror="this.style.display='none'">
           <span>Ferry Andran Saputra</span>
         </a>
 
@@ -1061,6 +1288,10 @@
         </nav>
 
         <div class="nav-actions">
+          <button type="button" class="btn-icon menu-toggle" id="menuToggle" aria-label="Buka menu"
+            aria-expanded="false" aria-controls="mobileMenu">
+            <span class="menu-icon" aria-hidden="true">☰</span>
+          </button>
           <button type="button" class="btn-icon" id="themeToggle" aria-label="Ganti mode gelap atau terang"
             title="Ganti Tema">
             <span id="themeIcon">☀️</span>
@@ -1069,6 +1300,14 @@
             <span>Hubungi</span>
           </a>
         </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#tentang" class="mobile-link">Tentang</a>
+        <a href="#proyek" class="mobile-link">Proyek</a>
+        <a href="#keahlian" class="mobile-link">Keahlian</a>
+        <a href="#pendidikan" class="mobile-link">Pendidikan</a>
+        <a href="#kontak" class="mobile-link">Kontak</a>
       </div>
     </div>
   </header>
@@ -1111,12 +1350,25 @@
               Lihat Proyek
             </a>
           </div>
+
+          <div class="social-row">
+            <a href="https://github.com/ferryandran" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="GitHub Ferry Andran Saputra">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="mailto:ferryandran04@gmail.com" class="social-link" aria-label="Email Ferry Andran Saputra">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v.4l-8 4.6-8-4.6v-.4zM0 5.7V12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V5.7l-7.5 4.3a1 1 0 0 1-1 0L0 5.7z"/></svg>
+              <span>Email</span>
+            </a>
+          </div>
         </div>
 
         <div class="photo-showcase">
           <div class="photo-card">
             <div class="photo-inner">
-              <img src="profile.jpg" alt="Foto Profesional Ferry Andran Saputra" class="profile-img" id="mainPhoto">
+              <img src="profile.jpg" alt="Foto Profesional Ferry Andran Saputra" class="profile-img" id="mainPhoto"
+                width="1440" height="2160" decoding="async">
             </div>
 
             <div class="photo-footer">
@@ -1189,6 +1441,7 @@
           <article class="project-card">
             <div class="project-banner-wrapper">
               <img src="project-voicedoor.jpg" alt="Preview Minecraft Voice Door AI" class="project-banner"
+                width="1376" height="768" loading="lazy" decoding="async"
                 onerror="this.style.display='none'">
               <div class="project-banner-badge">
                 <span class="status-dot"></span>
@@ -1256,6 +1509,13 @@
                 <li class="tech-tag">Vosk</li>
                 <li class="tech-tag">Streamlit</li>
               </ul>
+
+              <div class="social-row" style="margin-top: 1.25rem;">
+                <a href="https://github.com/ferryandran" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                  <span>Lihat Kode di GitHub</span>
+                </a>
+              </div>
             </div>
           </article>
         </div>
@@ -1480,7 +1740,14 @@
     <div class="wrap">
       <div class="footer-inner">
         <div>
-          &copy; 2026 <strong>Ferry Andran Saputra</strong> &bull; Insan Pembangunan
+          <div>&copy; 2026 <strong>Ferry Andran Saputra</strong> &bull; Insan Pembangunan</div>
+          <div class="social-row" style="margin-top: 0.9rem;">
+            <a href="https://github.com/ferryandran" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="GitHub Ferry Andran Saputra">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
         </div>
         <ul class="footer-links">
           <li><a href="#hero">Kembali ke Atas ↑</a></li>
@@ -1541,6 +1808,74 @@
         showToast('Email: ' + email);
       });
     });
+
+    // ===== Menu Mobile =====
+    (function initMobileMenu() {
+      const toggle = document.getElementById('menuToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (!toggle || !menu) return;
+
+      function setOpen(open) {
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+        menu.classList.toggle('open', open);
+      }
+
+      toggle.addEventListener('click', () => {
+        setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+
+      menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setOpen(false));
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+      });
+    })();
+
+    // ===== Scroll spy + animasi reveal =====
+    (function initScrollEffects() {
+      const sections = Array.from(document.querySelectorAll('section[id]'));
+      const navLinks = Array.from(document.querySelectorAll('.nav-link, .mobile-link'));
+      const revealTargets = document.querySelectorAll(
+        '.card, .project-card, .skill-card, .timeline-item, .about-box'
+      );
+      revealTargets.forEach((el) => el.classList.add('reveal'));
+
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReduced || !('IntersectionObserver' in window)) {
+        revealTargets.forEach((el) => el.classList.add('in-view'));
+      } else {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealTargets.forEach((el) => revealObserver.observe(el));
+      }
+
+      function onScroll() {
+        const scrollPos = window.scrollY + 140;
+        let currentId = null;
+        sections.forEach((section) => {
+          if (section.offsetTop <= scrollPos) {
+            currentId = section.id;
+          }
+        });
+        navLinks.forEach((link) => {
+          const href = link.getAttribute('href') || '';
+          link.classList.toggle('active', href === '#' + currentId);
+        });
+      }
+
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
   </script>
 </body>
 

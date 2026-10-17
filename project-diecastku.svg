@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="DIECASTKU — Platform Jual Beli Diecast Scale 1:64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0E1A"/>
+      <stop offset="1" stop-color="#0B1320"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0EA5E9" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#06B6D4" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#94A3B8" stroke-opacity="0.07"/>
+    </pattern>
+    <linearGradient id="stripe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0EA5E9" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#0EA5E9" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#06B6D4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Latar -->
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <circle cx="1030" cy="150" r="360" fill="url(#glow1)"/>
+  <circle cx="180" cy="570" r="320" fill="url(#glow2)"/>
+
+  <!-- Garis balap dekoratif -->
+  <g opacity="0.55">
+    <rect x="-160" y="585" width="1500" height="7" fill="url(#stripe)" transform="rotate(-9 600 337)"/>
+    <rect x="-160" y="625" width="1500" height="2.5" fill="url(#stripe)" transform="rotate(-9 600 337)"/>
+  </g>
+
+  <!-- Badge kategori -->
+  <g>
+    <rect x="118" y="148" width="232" height="50" rx="25" fill="none" stroke="#0EA5E9" stroke-opacity="0.55" stroke-width="1.5"/>
+    <text x="234" y="181" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#38BDF8" letter-spacing="3">E-COMMERCE</text>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="112" y="332" font-family="Arial, Helvetica, sans-serif" font-size="116" font-weight="800" letter-spacing="1">
+    <tspan fill="#F1F5F9">DIECAST</tspan><tspan fill="url(#brand)">KU</tspan>
+  </text>
+
+  <!-- Subjudul -->
+  <text x="118" y="392" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="600" fill="#94A3B8">Jual Beli Diecast Scale 1:64</text>
+  <text x="118" y="432" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#64748B">100% Original &#8226; Garansi Keaslian &#8226; Pengiriman Seluruh Indonesia</text>
+
+  <!-- Pill teknologi -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" fill="#F1F5F9">
+    <rect x="118" y="474" width="150" height="42" rx="21" fill="#111C2E" stroke="#1E293B"/>
+    <text x="193" y="502" text-anchor="middle">Next.js</text>
+    <rect x="284" y="474" width="140" height="42" rx="21" fill="#111C2E" stroke="#1E293B"/>
+    <text x="354" y="502" text-anchor="middle">React</text>
+    <rect x="440" y="474" width="182" height="42" rx="21" fill="#111C2E" stroke="#1E293B"/>
+    <text x="531" y="502" text-anchor="middle">Tailwind CSS</text>
+    <rect x="638" y="474" width="150" height="42" rx="21" fill="#111C2E" stroke="#1E293B"/>
+    <text x="713" y="502" text-anchor="middle">Axios</text>
+  </g>
+
+  <!-- Watermark 1:64 -->
+  <text x="1150" y="330" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="150" font-weight="800" fill="none" stroke="#38BDF8" stroke-opacity="0.16" stroke-width="2">1:64</text>
+
+  <!-- Mobil diecast -->
+  <g transform="translate(253.6 112) scale(0.8)">
+    <!-- Refleksi -->
+    <ellipse cx="925" cy="590" rx="250" ry="16" fill="#0EA5E9" opacity="0.08"/>
+    <!-- Bodi -->
+    <path fill="url(#brand)" d="M685 520
+      C700 516 715 508 730 496
+      C748 483 768 470 790 458
+      C815 445 845 428 880 420
+      C915 412 960 410 1005 414
+      C1050 418 1095 430 1125 450
+      C1148 465 1165 485 1168 505
+      C1170 514 1168 522 1162 526
+      L1130 530 L1100 532
+      A46 46 0 0 0 1008 532
+      L828 532
+      A46 46 0 0 0 736 532
+      L700 532
+      C690 532 683 528 685 520 Z"/>
+    <!-- Jendela -->
+    <path fill="#0A0E1A" opacity="0.45" d="M812 462 C835 448 860 434 890 428 C915 423 950 421 985 424 C1015 427 1045 435 1068 447 L1068 470 L812 470 Z"/>
+    <!-- Lampu depan -->
+    <circle cx="716" cy="503" r="7" fill="#E0F2FE"/>
+    <!-- Roda -->
+    <circle cx="1054" cy="532" r="44" fill="#0A0E1A" stroke="#38BDF8" stroke-width="6"/>
+    <circle cx="1054" cy="532" r="16" fill="none" stroke="#38BDF8" stroke-opacity="0.5" stroke-width="3"/>
+    <circle cx="782" cy="532" r="44" fill="#0A0E1A" stroke="#38BDF8" stroke-width="6"/>
+    <circle cx="782" cy="532" r="16" fill="none" stroke="#38BDF8" stroke-opacity="0.5" stroke-width="3"/>
+  </g>
+</svg>

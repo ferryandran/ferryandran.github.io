@@ -73,6 +73,7 @@
       --bg-card: rgba(18, 26, 43, 0.75);
       --bg-card-hover: rgba(26, 38, 62, 0.85);
       --bg-glass: rgba(15, 23, 42, 0.65);
+      --menu-bg: #0F172A;
       --ink: #F1F5F9;
       --ink-secondary: #94A3B8;
       --muted: #64748B;
@@ -111,6 +112,7 @@
       --bg-card: rgba(255, 255, 255, 0.85);
       --bg-card-hover: rgba(255, 255, 255, 0.98);
       --bg-glass: rgba(255, 255, 255, 0.75);
+      --menu-bg: #FFFFFF;
       --ink: #0F172A;
       --ink-secondary: #334155;
       --muted: #64748B;
@@ -1122,12 +1124,31 @@
     }
 
     .menu-toggle .menu-icon {
-      display: block;
-      transition: transform 0.25s ease;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 4px;
+      width: 18px;
     }
 
-    .menu-toggle[aria-expanded="true"] .menu-icon {
-      transform: rotate(90deg);
+    .menu-toggle .menu-icon > span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      transition: transform 0.25s ease, opacity 0.2s ease;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-icon > span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-icon > span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-icon > span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
     }
 
     .mobile-menu {
@@ -1136,6 +1157,10 @@
       gap: 0.25rem;
       padding: 0.5rem 0 1.25rem;
       border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--menu-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
 
     .mobile-menu.open {
@@ -1243,6 +1268,110 @@
       transform: translateY(0);
     }
 
+    /* ===== Responsif tambahan ===== */
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body,
+    .contact-val,
+    .project-desc,
+    .feature-item,
+    .timeline-body {
+      overflow-wrap: anywhere;
+    }
+
+    /* Tablet kecil & ponsel besar */
+    @media (max-width: 899px) {
+      .hero {
+        padding-top: 2rem;
+      }
+
+      .section-header {
+        position: static;
+      }
+    }
+
+    /* Ponsel */
+    @media (max-width: 600px) {
+      .card {
+        padding: 1.25rem;
+      }
+
+      .project-content {
+        padding: 1.25rem;
+      }
+
+      .cta-card {
+        padding: 1.5rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 1.35rem;
+      }
+
+      .cta-title {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .wrap {
+        padding: 0 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.05rem;
+      }
+
+      .hero-lead {
+        font-size: 1rem;
+      }
+
+      .brand span {
+        display: none;
+      }
+
+      .nav-actions {
+        gap: 0.4rem;
+      }
+
+      .nav-actions .btn-primary {
+        padding: 0.5rem 0.85rem;
+        font-size: 0.82rem;
+      }
+
+      .btn-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .photo-card {
+        max-width: 100%;
+      }
+
+      .project-title {
+        font-size: 1.25rem;
+      }
+
+      .social-link {
+        font-size: 0.8rem;
+        padding: 0.45rem 0.75rem;
+      }
+
+      .contact-label {
+        font-size: 0.7rem;
+      }
+
+      .contact-val {
+        font-size: 0.85rem;
+      }
+    }
+
     /* Hormati preferensi gerak rendah */
     @media (prefers-reduced-motion: reduce) {
       *,
@@ -1291,7 +1420,7 @@
         <div class="nav-actions">
           <button type="button" class="btn-icon menu-toggle" id="menuToggle" aria-label="Buka menu"
             aria-expanded="false" aria-controls="mobileMenu">
-            <span class="menu-icon" aria-hidden="true">☰</span>
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
           </button>
           <button type="button" class="btn-icon" id="themeToggle" aria-label="Ganti mode gelap atau terang"
             title="Ganti Tema">
@@ -1522,6 +1651,73 @@
                 <a href="https://github.com/ferryandran" target="_blank" rel="noopener noreferrer" class="social-link">
                   <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
                   <span>Lihat Kode di GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-banner-wrapper">
+              <img src="project-diecastku.svg" alt="Preview situs DIECASTKU" class="project-banner"
+                width="1200" height="675" loading="lazy" decoding="async">
+              <div class="project-banner-badge">
+                <span class="status-dot"></span>
+                <span>Live di Vercel</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-header-row">
+                <div>
+                  <h3 class="project-title">DIECASTKU &bull; E-Commerce Diecast</h3>
+                  <div class="project-subtitle">Platform Jual Beli Diecast Scale 1:64 &bull; Toko Online &amp; Manajemen Pesanan
+                  </div>
+                </div>
+              </div>
+
+              <p class="project-desc">
+                Platform e-commerce untuk jual beli miniatur mobil diecast scale 1:64. Pengguna dapat menjelajahi
+                koleksi, menambahkan barang ke keranjang, dan checkout langsung via WhatsApp, lengkap dengan halaman
+                katalog, masuk akun, serta panel pesanan dan testimoni pelanggan.
+              </p>
+
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <span class="feature-icon">✓</span>
+                  <div><strong>Frontend Dinamis:</strong> Dibangun dengan Next.js dan React, menghadirkan antarmuka
+                    interaktif seperti keranjang belanja, filter koleksi, dan marquee testimoni pelanggan.</div>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-icon">✓</span>
+                  <div><strong>Integrasi Data:</strong> Pengambilan data koleksi dan pesanan menggunakan Axios,
+                    disertai notifikasi SweetAlert2 serta penyimpanan sesi pelanggan.</div>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-icon">✓</span>
+                  <div><strong>Desain Responsif:</strong> Tata letak Tailwind CSS yang menyesuaikan berbagai ukuran
+                    layar, dari desktop hingga ponsel.</div>
+                </li>
+              </ul>
+
+              <ul class="tech-tags" aria-label="Teknologi yang digunakan">
+                <li class="tech-tag">Next.js</li>
+                <li class="tech-tag">React</li>
+                <li class="tech-tag">Tailwind CSS</li>
+                <li class="tech-tag">Axios</li>
+                <li class="tech-tag">SweetAlert2</li>
+                <li class="tech-tag">Vercel</li>
+              </ul>
+
+              <div class="social-row" style="margin-top: 1.25rem;">
+                <a href="https://diecastku.vercel.app/" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <path d="M15 3h6v6" /><path d="M10 14 21 3" /></svg>
+                  <span>Lihat Demo</span>
+                </a>
+                <a href="https://github.com/ferryandran/Webb" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>
+                  <span>Kode Sumber</span>
                 </a>
               </div>
             </div>
@@ -1878,7 +2074,8 @@
         const scrollPos = window.scrollY + 140;
         let currentId = null;
         sections.forEach((section) => {
-          if (section.offsetTop <= scrollPos) {
+          const top = section.getBoundingClientRect().top + window.scrollY;
+          if (top <= scrollPos) {
             currentId = section.id;
           }
         });

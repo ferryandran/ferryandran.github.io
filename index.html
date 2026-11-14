@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ferry Andran Saputra | Portofolio — Bisnis, Data & AI</title>
   <meta name="description"
     content="Portofolio Ferry Andran Saputra — mahasiswa Insan Pembangunan. Fokus pada strategi bisnis, analisis data, dan rekayasa AI (speech AI, Python, FastAPI).">
@@ -732,6 +732,72 @@
       border-radius: var(--radius-sm);
     }
 
+    /* Repositori GitHub */
+    .repo-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (min-width: 600px) {
+      .repo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .repo-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .repo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      color: var(--ink);
+      min-height: 44px;
+    }
+
+    .repo-card:hover {
+      border-color: var(--line-active);
+      transform: translateY(-2px);
+      background: var(--bg-card-hover);
+    }
+
+    .repo-name {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--ink);
+      word-break: break-all;
+    }
+
+    .repo-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .repo-lang {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      font-weight: 600;
+      color: var(--ink-secondary);
+    }
+
     /* Pipeline */
     .pipeline-box {
       background: var(--panel);
@@ -1273,6 +1339,14 @@
       -webkit-text-size-adjust: 100%;
     }
 
+    a, button {
+      touch-action: manipulation;
+    }
+
+    img, video, svg {
+      max-width: 100%;
+    }
+
     body,
     .contact-val,
     .project-desc,
@@ -1369,6 +1443,102 @@
 
       .contact-val {
         font-size: 0.85rem;
+      }
+    }
+
+    /* ===== Perbaikan tambahan untuk ponsel ===== */
+    @media (max-width: 600px) {
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-ctas .btn-primary,
+      .hero-ctas .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .social-link {
+        flex: 1 1 auto;
+        justify-content: center;
+      }
+
+      .skill-card {
+        padding: 1.25rem;
+      }
+
+      .pipeline-box {
+        padding: 1rem;
+      }
+
+      .timeline {
+        padding-left: 1.25rem;
+      }
+
+      .toast {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu-toggle,
+      #themeToggle {
+        min-width: 44px;
+        min-height: 44px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        min-height: 44px;
+      }
+
+      .social-link {
+        min-height: 40px;
+      }
+
+      .contact-item {
+        min-height: 44px;
+      }
+
+      .project-banner-badge {
+        top: 0.75rem;
+        left: 0.75rem;
+        font-size: 0.72rem;
+        padding: 0.3rem 0.65rem;
+      }
+
+      .photo-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .wrap {
+        padding: 0 0.875rem;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .section-title {
+        font-size: 1.25rem;
+      }
+
+      .highlight-pill {
+        font-size: 0.78rem;
+        padding: 0.3rem 0.65rem;
+      }
+
+      .status-pill {
+        font-size: 0.78rem;
+        padding: 0.3rem 0.75rem;
       }
     }
 
@@ -1722,6 +1892,45 @@
               </div>
             </div>
           </article>
+
+          <div class="card" style="margin-top: 1.5rem;">
+            <h3 class="skill-card-title" style="margin-bottom: 0.5rem;">Repositori GitHub Lainnya</h3>
+            <p class="section-desc" style="margin-bottom: 1rem;">Kumpulan repositori publik di akun GitHub saya.</p>
+            <div class="repo-grid">
+              <a class="repo-card" href="https://github.com/ferryandran/bengkelmotor" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">bengkelmotor</span>
+                <span class="repo-meta"><span class="repo-lang">HTML</span><span>Lihat di GitHub →</span></span>
+              </a>
+              <a class="repo-card" href="https://github.com/ferryandran/Jajanku" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">Jajanku</span>
+                <span class="repo-meta"><span class="repo-lang">JavaScript</span><span>Lihat di GitHub →</span></span>
+              </a>
+              <a class="repo-card" href="https://github.com/ferryandran/mod_voice" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">mod_voice</span>
+                <span class="repo-meta"><span class="repo-lang">Java</span><span>Lihat di GitHub →</span></span>
+              </a>
+              <a class="repo-card" href="https://github.com/ferryandran/pencatatan-pngeluaran" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">pencatatan-pngeluaran</span>
+                <span class="repo-meta"><span class="repo-lang">PHP</span><span>Lihat di GitHub →</span></span>
+              </a>
+              <a class="repo-card" href="https://github.com/ferryandran/pengenal-suara-" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">pengenal-suara-</span>
+                <span class="repo-meta"><span class="repo-lang">Python</span><span>Lihat di GitHub →</span></span>
+              </a>
+              <a class="repo-card" href="https://github.com/ferryandran/traffic-overload" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">traffic-overload</span>
+                <span class="repo-meta"><span class="repo-lang">HTML</span><span>Lihat di GitHub →</span></span>
+              </a>
+              <a class="repo-card" href="https://github.com/ferryandran/voice" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">voice</span>
+                <span class="repo-meta"><span class="repo-lang">Python</span><span>Lihat di GitHub →</span></span>
+              </a>
+              <a class="repo-card" href="https://github.com/ferryandran/web" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">web</span>
+                <span class="repo-meta"><span class="repo-lang">—</span><span>Lihat di GitHub →</span></span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -2030,10 +2239,18 @@
         toggle.setAttribute('aria-expanded', String(open));
         toggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
         menu.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
       }
 
-      toggle.addEventListener('click', () => {
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+          setOpen(false);
+        }
       });
 
       menu.querySelectorAll('a').forEach((link) => {

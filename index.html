@@ -652,6 +652,32 @@
       gap: 0.4rem;
     }
 
+    /* Status proyek (tanpa banner foto) */
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--badge-success-bg);
+      border: 1px solid var(--badge-success-border);
+      color: var(--badge-success-text);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.6rem;
+    }
+
+    .project-status .status-dot {
+      width: 7px;
+      height: 7px;
+    }
+
+    .project-status.live {
+      background: rgba(14, 165, 233, 0.12);
+      border-color: rgba(14, 165, 233, 0.3);
+      color: var(--accent);
+    }
+
     .project-content {
       padding: 2rem;
     }
@@ -1746,21 +1772,15 @@
 
         <div>
           <article class="project-card">
-            <div class="project-banner-wrapper">
-              <img src="project-voicedoor.jpg" alt="Preview Minecraft Voice Door AI" class="project-banner"
-                width="1376" height="768" loading="lazy" decoding="async"
-                onerror="this.style.display='none'">
-              <div class="project-banner-badge">
-                <span class="status-dot"></span>
-                <span>Dalam Pengembangan</span>
-              </div>
-            </div>
-
             <div class="project-content">
               <div class="project-header-row">
                 <div>
-                  <h3 class="project-title">Voice Door &bull; AI Voice Recognition</h3>
-                  <div class="project-subtitle">Minecraft Mod (Forge 1.20.1) & Layanan AI Verifikasi Suara</div>
+                  <div class="project-status">
+                    <span class="status-dot"></span>
+                    <span>Dalam Pengembangan</span>
+                  </div>
+                  <h3 class="project-title">🎙️ Voice Door &bull; AI Voice Recognition</h3>
+                  <div class="project-subtitle">Minecraft Mod (Forge 1.20.1) &amp; Layanan AI Verifikasi Suara</div>
                 </div>
               </div>
 
@@ -1827,19 +1847,14 @@
           </article>
 
           <article class="project-card">
-            <div class="project-banner-wrapper">
-              <img src="project-diecastku.svg" alt="Preview situs DIECASTKU" class="project-banner"
-                width="1200" height="675" loading="lazy" decoding="async">
-              <div class="project-banner-badge">
-                <span class="status-dot"></span>
-                <span>Live di Vercel</span>
-              </div>
-            </div>
-
             <div class="project-content">
               <div class="project-header-row">
                 <div>
-                  <h3 class="project-title">DIECASTKU &bull; E-Commerce Diecast</h3>
+                  <div class="project-status live">
+                    <span class="status-dot"></span>
+                    <span>Live di Vercel</span>
+                  </div>
+                  <h3 class="project-title">🛒 DIECASTKU &bull; E-Commerce Diecast</h3>
                   <div class="project-subtitle">Platform Jual Beli Diecast Scale 1:64 &bull; Toko Online &amp; Manajemen Pesanan
                   </div>
                 </div>
@@ -2154,6 +2169,7 @@
       <div class="footer-inner">
         <div>
           <div>&copy; 2026 <strong>Ferry Andran Saputra</strong> &bull; Insan Pembangunan</div>
+          <div style="margin-top:0.4rem;font-size:0.82rem;color:var(--muted);">👁️ Total pengunjung: <strong id="visitorCount">memuat...</strong></div>
           <div class="social-row" style="margin-top: 0.9rem;">
             <a href="https://github.com/ferryandran" target="_blank" rel="noopener noreferrer" class="social-link"
               aria-label="GitHub Ferry Andran Saputra">
@@ -2304,6 +2320,22 @@
 
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+
+    // ===== Monitoring jumlah pengunjung =====
+    (function initVisitorCounter() {
+      const el = document.getElementById('visitorCount');
+      if (!el) return;
+      const endpoint = 'https://countapi.mileshilliard.com/api/v1/hit/ferryandran-portfolio-visits';
+      fetch(endpoint)
+        .then((r) => (r.ok ? r.json() : Promise.reject()))
+        .then((data) => {
+          const value = (data && typeof data.value === 'number') ? data.value : (data && data.value);
+          el.textContent = (value != null) ? Number(value).toLocaleString('id-ID') : '—';
+        })
+        .catch(() => {
+          el.textContent = '—';
+        });
     })();
   </script>
 </body>
